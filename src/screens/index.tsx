@@ -1,9 +1,9 @@
 import FirstScreen from './FirstScreen'
 import SecondScreen from './SecondScreen'
-import ThirdScreen from './ThirdScreen'
+import MainScreen from './MainScreen'
 
 export {
     FirstScreen,
     SecondScreen,
-    ThirdScreen
+    MainScreen
 }

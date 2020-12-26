@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components/native'
-import {ImagePropTypes, View, StyleSheet} from 'react-native'
+import {StyleSheet} from 'react-native'
 import {LinearGradient} from 'expo-linear-gradient'
 
 
@@ -10,15 +10,14 @@ import {LinearGradient} from 'expo-linear-gradient'
 
 type ButtonProps = {
     title: string,
-    go: Function
 }
 
-const ButtonNext = ( {title, go} : ButtonProps) => {
+const ButtonNext = ( {title} : ButtonProps) => {
    
     return(
    
        
-            <NextButton onPress={() => go()}><LinearGradient
+            <NextButton><LinearGradient
             colors={['#36D1DC', '#5B86E5']}
             start={[0, 0.5]}
             end={[1, 0.5]}
@@ -44,13 +43,12 @@ const styles = StyleSheet.create({
 })
 
 
-const NextButton = styled.TouchableOpacity`
+const NextButton = styled.View`
 display: flex;
 width: 284px;
-margin-top: 50px;
 height: 50px;
-margin-left: auto;
-margin-right: auto;
+margin-top: -35%;
+margin-right: 8%;
 border-radius: ${({ theme }) => theme.borderRadius.Button};
 `
 

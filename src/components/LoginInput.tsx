@@ -9,7 +9,7 @@ const LoginInput = () => {
     return(
         <Container>
             <LoginText>Введите свой логин</LoginText>
-            <LoginTextInput></LoginTextInput>      
+            <LoginTextInput/>      
         </Container>
     )
 }
@@ -23,22 +23,23 @@ padding-right: 10px;
 `
 
 const LoginText = styled.Text`
-color: ${props => props.theme.colors.system.black};
-font-size: ${props => props.theme.typeScale.mini};
-line-height: ${props => props.theme.lineHeight.mini};
 margin-left: 20px;
+color: ${({ theme }) => theme.colors.system.black};
+font-size: ${({ theme }) => theme.typeScale.InputHeader};
+line-height: ${({ theme }) => theme.lineHeight.InputHeader};
 opacity: 0.4;
 `
 
 
 
 const LoginTextInput = styled.TextInput`
-background: ${props => props.theme.colors.system.white};
-box-shadow: ${props => props.theme.shadow.basic};
-border-radius: ${props => props.theme.borderRadius.basic};
 height: 50px;
 margin-top: 5px;
 padding-left: 20px;
+border-radius: ${({ theme }) => theme.borderRadius.Input};
+background: ${({ theme }) => theme.colors.system.white};
+box-shadow: ${({ theme }) => theme.shadow.basic};
+
 `
 
 
